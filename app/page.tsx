@@ -1,9 +1,10 @@
-import Main from "@/app/screens/Main";
+import BooksPage from "@/app/components/BooksPage";
+import Header from "@/app/components/Header";
 
 export default function Home() {
     return (
         <div>
-            <Main/>
+            <BooksPage />
         </div>
     );
 }

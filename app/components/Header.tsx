@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 const Header = () => {
     return (
-        <nav className="border-4 border-b-red-400">
+        <nav className="border-4 border-b-red-500">
             <ul className="flex justify-between items-center px-4 pt-3 pb-4">
                 <li className="text-2xl font-bold flex-1 text-left ml-4">
-                    <Link href="/add-book" className="hover:text-red-500 transition-colors">
+                    <Link href="/addbook" className="hover:text-red-500 transition-colors">
                         Добавить Книгу
                     </Link>
                 </li>
