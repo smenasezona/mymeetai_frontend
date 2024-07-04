@@ -7,7 +7,7 @@ interface BookItemProps {
 
 const BookItem: React.FC<BookItemProps> = ({book}) => {
     return (
-        <div className="relative w-full p-1 border-2 border-amber-400">
+        <div className="relative w-full p-1 border-2 border-amber-400 ">
             <div
                 className="absolute top-1 left-1 w-3 h-3 border-2 border-amber-400 text-amber-400 flex items-center justify-center text-xs">•
             </div>
