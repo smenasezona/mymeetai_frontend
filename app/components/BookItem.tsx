@@ -5,7 +5,7 @@ interface BookItemProps {
     book: BookData
 }
 
-const BookItem: React.FC<BookItemProps> = ({book}) => {
+const BookItem: React.FC<BookItemProps> = React.memo(({book}) => {
     return (
         <div className="relative w-full p-1 border-2 border-amber-400 ">
             <div
@@ -22,6 +22,7 @@ const BookItem: React.FC<BookItemProps> = ({book}) => {
                                 className="w-[250px] h-auto"
                                 src={book.cover}
                                 alt={book.title}
+                                loading={"lazy"}
                             />
                         </picture>
                     </div>
@@ -43,6 +44,6 @@ const BookItem: React.FC<BookItemProps> = ({book}) => {
             </div>
         </div>
     )
-}
+})
 
 export default BookItem
