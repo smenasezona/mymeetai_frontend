@@ -1,7 +1,8 @@
 import { BookSchemaType } from '@/schemas/bookScheme'
 import { BookData } from '@/types/bookData'
+import {BASE_URL} from "@/utils/constants/constants";
 
-const BASE_URL = 'http://127.0.0.1:8001'
+
 
 export async function createBook(bookData: BookSchemaType) {
 	const response = await fetch(`${BASE_URL}/books/`, {
@@ -43,6 +44,7 @@ export async function updateBook(id: number, bookData: BookData) {
 		},
 		body: JSON.stringify(bookData),
 	})
+	return await response.json()
 }
 
 export async function deleteBook(id: number) {
