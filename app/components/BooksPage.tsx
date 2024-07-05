@@ -4,14 +4,7 @@ import BookItem from '@/app/components/BookItem'
 import Pagination from '@/app/components/Pagination'
 import {BookData} from '@/types/bookData'
 import {getAllBooks} from '@/utils/api'
-import {Bona_Nova} from 'next/font/google'
 import {useEffect, useState} from 'react'
-
-const bona_nova = Bona_Nova({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-    display: 'swap',
-})
 
 const ITEMS_PER_PAGE = 10
 
@@ -41,7 +34,7 @@ const BooksPage = () => {
     }, [currentPage])
 
     return (
-        <div className={bona_nova.className}>
+        <>
             <div className='container mx-auto m-6 mt-14 sm:px-4 lg:px-6  '>
                 <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-16'>
                     {books &&
@@ -55,7 +48,7 @@ const BooksPage = () => {
                 totalPages={totalPages}
                 onPageChange={setCurrentPage}
             />
-        </div>
+        </>
     )
 }
 
