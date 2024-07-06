@@ -8,7 +8,7 @@ interface PaginationProps {
     onPageChange: (page: number) => void;
 }
 
-const Pagination: React.FC<PaginationProps> = React.memo(({currentPage, totalPages, onPageChange}) => {
+const Pagination: React.FC<PaginationProps> = ({currentPage, totalPages, onPageChange}) => {
 
     useEffect(() => {
         window.scrollTo({
@@ -42,6 +42,6 @@ const Pagination: React.FC<PaginationProps> = React.memo(({currentPage, totalPag
             </button>
         </div>
     )
-})
+}
 
 export default Pagination;

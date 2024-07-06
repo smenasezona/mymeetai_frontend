@@ -27,7 +27,7 @@ const BookItem: React.FC<BookItemProps> = React.memo(({book}) => {
                         </picture>
                     </div>
                     <div className="pl-4 flex-grow flex flex-col">
-                        <h2 className="font-bold text-2xl pb-2">{book.title}</h2>
+                        <h2 className="font-bold text-gray-700 text-2xl pb-2">{book.title}</h2>
                         <p className="text-gray-700 text-xl pb-2"><strong>Автор:</strong> {book.author}</p>
                         <p className="text-gray-700 text-xl pb-2"><strong>Жанр:</strong> {book.genre}</p>
                         <p className="text-gray-700 text-xl pb-2"><strong>Дата написания:</strong> {book.release_date}
